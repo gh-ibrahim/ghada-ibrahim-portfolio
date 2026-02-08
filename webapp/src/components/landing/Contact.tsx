@@ -1,4 +1,4 @@
-import { Linkedin } from "lucide-react";
+import { Linkedin, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 
 export const Contact = () => {
@@ -7,11 +7,32 @@ export const Contact = () => {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xnnboqgp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSuccess(true);
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setIsSuccess(false), 5000);
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -161,10 +182,20 @@ export const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full px-8 py-4 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
+                  disabled={isSubmitting}
+                  className="w-full px-8 py-4 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Nachricht senden
+                  {isSubmitting ? "Wird gesendet..." : "Nachricht senden"}
                 </button>
+
+                {isSuccess && (
+                  <div className="flex items-center gap-2 p-4 bg-accent/10 border border-accent/20 rounded-lg text-accent">
+                    <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
+                    <p className="text-sm">
+                      Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.
+                    </p>
+                  </div>
+                )}
               </form>
             </div>
           </div>
