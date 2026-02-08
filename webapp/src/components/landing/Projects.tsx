@@ -1,120 +1,147 @@
-import { ExternalLink } from "lucide-react";
+import { Building2, GraduationCap, MapPin } from "lucide-react";
 
-const projects = [
+const experiences = [
   {
-    title: "E-Commerce Platform",
-    category: "Web Development",
-    description:
-      "Ein modernes E-Commerce-System mit nahtloser Benutzererfahrung und performanter Backend-Architektur.",
-    year: "2024",
-    tags: ["React", "Next.js", "Stripe"],
+    organization: "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit)",
+    role: "IKT- & Digitalisierungsberaterin",
+    location: "Palästina",
+    period: "2019-2022",
+    highlights: [
+      "Entwicklung digitaler Beteiligungsformate (E-Participation)",
+      "Digitale Jugendprogramme mit über 1.000 Teilnehmenden",
+      "Aufbau von Multi-Stakeholder-Partnerschaften",
+    ],
   },
   {
-    title: "Brand Identity",
-    category: "Design",
-    description:
-      "Komplette Markenentwicklung für ein Technologie-Startup, von Logo bis Designsystem.",
-    year: "2024",
-    tags: ["Branding", "UI/UX", "Figma"],
+    organization: "Gaza Sky Geeks",
+    role: "Senior Managerin & Programmmanagerin",
+    location: "Palästina",
+    period: "2016-2019",
+    highlights: [
+      "Strategische Leitung von Tech-Education-Programmen",
+      "Skalierung von Bildungsangeboten (Software Development, Freelancing, ICT)",
+      "Internationale Förder- und Partnernetzwerke",
+    ],
   },
   {
-    title: "Portfolio Website",
-    category: "Web Development",
-    description:
-      "Minimalistische Portfolio-Website für einen Fotografen mit Fokus auf Bildpräsentation.",
-    year: "2023",
-    tags: ["React", "Framer Motion", "CMS"],
+    organization: "Universität Stuttgart",
+    role: "Freelance Trainerin",
+    location: "Deutschland",
+    period: "2022-Heute",
+    highlights: [
+      "Workshops zu Human-Centered Design",
+      "Interdisziplinäre Studienprogramme",
+      "Praxisorientierte Methodenvermittlung",
+    ],
+  },
+];
+
+const education = [
+  {
+    title: "Mini MBA / Emerging Leaders Programme",
+    institution: "Portland State University",
+    location: "USA",
+    focus: "Leadership & Strategisches Management",
   },
   {
-    title: "Mobile App",
-    category: "App Development",
-    description:
-      "Native mobile Anwendung für iOS und Android mit Fokus auf Performance und Usability.",
-    year: "2023",
-    tags: ["React Native", "TypeScript", "Firebase"],
+    title: "Projektmanagement für Entwicklungsprojekte",
+    institution: "PMD Pro Zertifizierung",
+    location: "International",
+    focus: "Project Management for Development",
+  },
+  {
+    title: "Data Analytics mit Python",
+    institution: "DataCamp",
+    location: "Online",
+    focus: "Datenanalyse & Programmierung",
   },
 ];
 
 export const Projects = () => {
   return (
-    <section id="projekte" className="border-t border-border bg-background px-6 py-24">
-      <div className="container max-w-6xl">
-        <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
-          {/* Section label */}
-          <div className="lg:col-span-3">
-            <div className="sticky top-24">
-              <div className="mb-4 h-px w-12 bg-foreground" />
-              <h2 className="font-mono text-sm uppercase tracking-wider text-muted-foreground">
-                03 — Projekte
-              </h2>
+    <section id="experience" className="relative py-24 md:py-32 bg-card">
+      <div className="container px-6 md:px-12 lg:px-24">
+        <div className="max-w-6xl mx-auto">
+          {/* Section header */}
+          <div className="mb-16">
+            <div className="flex items-center gap-4 mb-4">
+              <span className="text-sm font-mono text-accent tracking-wider">03</span>
+              <div className="h-px flex-1 bg-border max-w-16" />
+            </div>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Internationale Erfahrung
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl">
+              Über viele Jahre habe ich in internationalen Entwicklungs- und Bildungsprojekten
+              gearbeitet – mit Fokus auf Digitalisierung, Tech Education und Governance in
+              Technology.
+            </p>
+          </div>
+
+          {/* Professional Experience */}
+          <div className="mb-16">
+            <h3 className="font-semibold text-2xl text-foreground mb-8 flex items-center gap-3">
+              <Building2 className="w-6 h-6 text-accent" />
+              Berufserfahrung
+            </h3>
+
+            <div className="space-y-8">
+              {experiences.map((exp, index) => (
+                <div
+                  key={index}
+                  className="p-8 bg-background border border-border rounded-lg hover:shadow-lg transition-all"
+                >
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                    <div>
+                      <h4 className="font-serif text-2xl font-semibold text-foreground mb-2">
+                        {exp.organization}
+                      </h4>
+                      <p className="text-lg text-primary font-medium mb-2">{exp.role}</p>
+                    </div>
+                    <div className="flex flex-col items-start md:items-end gap-2">
+                      <span className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 text-accent text-sm rounded-full border border-accent/20">
+                        <MapPin className="w-3 h-3" />
+                        {exp.location}
+                      </span>
+                      <span className="text-sm font-mono text-muted-foreground">
+                        {exp.period}
+                      </span>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-2 mt-4">
+                    {exp.highlights.map((highlight, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+                        <span className="text-muted-foreground">{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Projects list */}
-          <div className="lg:col-span-9">
-            <div className="mb-12 space-y-4">
-              <h3 className="font-sans text-3xl font-light leading-tight text-foreground sm:text-4xl">
-                Ausgewählte Arbeiten
-              </h3>
-              <p className="text-base leading-relaxed text-muted-foreground">
-                Eine Auswahl meiner aktuellen Projekte und Arbeiten.
-              </p>
-            </div>
+          {/* Education & Training */}
+          <div>
+            <h3 className="font-semibold text-2xl text-foreground mb-8 flex items-center gap-3">
+              <GraduationCap className="w-6 h-6 text-accent" />
+              Weiterbildung & Qualifikationen
+            </h3>
 
-            <div className="space-y-1">
-              {projects.map((project, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {education.map((edu, index) => (
                 <div
                   key={index}
-                  className="group border-t border-border py-8 transition-all first:border-t-0 hover:bg-muted"
+                  className="p-6 bg-background border border-border rounded-lg hover:shadow-lg transition-all"
                 >
-                  <div className="grid gap-6 px-6 lg:grid-cols-12 lg:gap-8">
-                    {/* Project info */}
-                    <div className="lg:col-span-8">
-                      <div className="mb-3 flex items-center gap-4">
-                        <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
-                          {project.category}
-                        </span>
-                        <span className="h-px w-4 bg-border" />
-                        <span className="font-mono text-xs text-muted-foreground">
-                          {project.year}
-                        </span>
-                      </div>
-                      <h4 className="mb-3 font-sans text-2xl font-light text-foreground transition-colors group-hover:text-accent">
-                        {project.title}
-                      </h4>
-                      <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
-                        {project.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {project.tags.map((tag, idx) => (
-                          <span
-                            key={idx}
-                            className="border border-border bg-background px-3 py-1 font-mono text-xs text-foreground"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Project image placeholder and link */}
-                    <div className="lg:col-span-4">
-                      <div className="aspect-[4/3] border border-border bg-muted/50">
-                        {/* Placeholder for project image */}
-                        <div className="flex h-full items-center justify-center">
-                          <div className="text-center">
-                            <div className="mb-2 mx-auto h-12 w-12 border border-muted-foreground/20" />
-                            <p className="font-mono text-xs text-muted-foreground">
-                              Projektbild
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <button className="mt-4 flex w-full items-center justify-center gap-2 border border-border bg-background px-4 py-2 font-mono text-xs uppercase tracking-wider text-foreground transition-all hover:border-foreground hover:bg-foreground hover:text-background">
-                        Projekt ansehen
-                        <ExternalLink className="h-3 w-3" />
-                      </button>
-                    </div>
+                  <div className="mb-3">
+                    <div className="text-xs font-mono text-accent mb-2">{edu.location}</div>
+                    <h4 className="font-semibold text-foreground mb-1">{edu.title}</h4>
+                    <p className="text-sm text-muted-foreground">{edu.institution}</p>
+                  </div>
+                  <div className="pt-3 border-t border-border">
+                    <p className="text-xs text-muted-foreground">{edu.focus}</p>
                   </div>
                 </div>
               ))}

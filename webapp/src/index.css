@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -11,44 +12,44 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 0 0% 8%;
+    --background: 32 22% 97%;
+    --foreground: 25 25% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 8%;
+    --card: 30 20% 99%;
+    --card-foreground: 25 25% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
+    --popover: 30 20% 99%;
+    --popover-foreground: 25 25% 12%;
 
-    --primary: 0 0% 12%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 25 35% 18%;
+    --primary-foreground: 32 22% 97%;
 
-    --secondary: 0 0% 94%;
-    --secondary-foreground: 0 0% 12%;
+    --secondary: 28 40% 92%;
+    --secondary-foreground: 25 35% 18%;
 
-    --muted: 0 0% 95%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 30 25% 94%;
+    --muted-foreground: 25 12% 45%;
 
-    --accent: 210 100% 50%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 165 65% 45%;
+    --accent-foreground: 32 22% 97%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 32 22% 97%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 12%;
+    --border: 30 18% 88%;
+    --input: 30 18% 88%;
+    --ring: 25 35% 18%;
 
-    --radius: 0rem;
+    --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 0 0% 8%;
-    --sidebar-primary: 0 0% 12%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 0 0% 94%;
-    --sidebar-accent-foreground: 0 0% 12%;
-    --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 0 0% 12%;
+    --sidebar-background: 30 20% 99%;
+    --sidebar-foreground: 25 25% 12%;
+    --sidebar-primary: 25 35% 18%;
+    --sidebar-primary-foreground: 32 22% 97%;
+    --sidebar-accent: 28 40% 92%;
+    --sidebar-accent-foreground: 25 35% 18%;
+    --sidebar-border: 30 18% 88%;
+    --sidebar-ring: 25 35% 18%;
   }
 
   .dark {

@@ -1,94 +1,138 @@
-import { Code, Palette, Smartphone, Zap } from "lucide-react";
-
-const services = [
-  {
-    icon: Palette,
-    title: "Design",
-    description:
-      "Visuelles Design, Brand Identity und User Interface Design für digitale Produkte.",
-    details: ["UI/UX Design", "Brand Identity", "Design Systems", "Prototyping"],
-  },
-  {
-    icon: Code,
-    title: "Entwicklung",
-    description:
-      "Frontend- und Backend-Entwicklung mit modernen Technologien und Best Practices.",
-    details: ["Web Development", "React/Next.js", "TypeScript", "API Integration"],
-  },
-  {
-    icon: Smartphone,
-    title: "Responsive Design",
-    description:
-      "Mobile-first Ansatz für optimale Darstellung auf allen Geräten und Bildschirmgrößen.",
-    details: ["Mobile Optimization", "Cross-Browser", "Performance", "Accessibility"],
-  },
-  {
-    icon: Zap,
-    title: "Beratung",
-    description:
-      "Strategische Beratung für digitale Projekte, von der Konzeption bis zum Launch.",
-    details: ["Strategy", "Workshops", "Code Review", "Optimization"],
-  },
-];
+import { Target, TrendingUp, Users2, Award } from "lucide-react";
 
 export const Services = () => {
   return (
-    <section id="leistungen" className="border-t border-border bg-muted px-6 py-24">
-      <div className="container max-w-6xl">
-        <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
-          {/* Section label */}
-          <div className="lg:col-span-3">
-            <div className="sticky top-24">
-              <div className="mb-4 h-px w-12 bg-foreground" />
-              <h2 className="font-mono text-sm uppercase tracking-wider text-muted-foreground">
-                02 — Leistungen
-              </h2>
+    <section id="value-add" className="relative py-24 md:py-32 bg-background">
+      <div className="container px-6 md:px-12 lg:px-24">
+        <div className="max-w-6xl mx-auto">
+          {/* Section header */}
+          <div className="mb-16">
+            <div className="flex items-center gap-4 mb-4">
+              <span className="text-sm font-mono text-accent tracking-wider">02</span>
+              <div className="h-px flex-1 bg-border max-w-16" />
+            </div>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Was ich in dein Team einbringe
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl">
+              Strategische Wirkung statt nur Umsetzung – ich verbinde Strategie mit operativer
+              Umsetzung, von der Konzeption digitaler Programme bis zur erfolgreichen
+              Implementierung.
+            </p>
+          </div>
+
+          {/* Results section */}
+          <div className="mb-16">
+            <h3 className="font-semibold text-2xl text-foreground mb-6 flex items-center gap-3">
+              <Target className="w-6 h-6 text-accent" />
+              Nachweisbare Ergebnisse
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="p-6 bg-card border border-border rounded-lg hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <TrendingUp className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-2">
+                      50+ Digitalprojekte erfolgreich geleitet
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      Mit messbar höherer Nutzerakzeptanz und nachweislicher Wirkung
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6 bg-card border border-border rounded-lg hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Users2 className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-2">
+                      Skalierung von Bildungsprogrammen
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      Deutlich verbesserte Abschluss- und Jobvermittlungsquoten
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6 bg-card border border-border rounded-lg hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Award className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-2">
+                      Internationale Partnerschaften
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      Aufbau mit Tech-Unternehmen, NGOs und Fördergebern
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6 bg-card border border-border rounded-lg hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Target className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-2">
+                      Fördermittelakquise & Budgetverantwortung
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      Erfolgreiche Finanzierung und verantwortungsvolles Management
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Services grid */}
-          <div className="lg:col-span-9">
-            <div className="mb-12 space-y-4">
-              <h3 className="font-sans text-3xl font-light leading-tight text-foreground sm:text-4xl">
-                Was ich anbiete
-              </h3>
-              <p className="text-base leading-relaxed text-muted-foreground">
-                Ein umfassendes Spektrum digitaler Dienstleistungen, maßgeschneidert
-                für Ihre Anforderungen.
-              </p>
+          {/* Working style & competencies */}
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Working style */}
+            <div>
+              <h3 className="font-semibold text-2xl text-foreground mb-6">Arbeitsweise</h3>
+              <ul className="space-y-4">
+                {[
+                  "Menschenzentriert & nutzerfokussiert",
+                  "Strukturiert & wirkungsorientiert",
+                  "Erfahren in komplexen, internationalen Stakeholder-Umfeldern",
+                  "Stark in Kommunikation, Facilitation und Teamführung",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <div className="grid gap-8 sm:grid-cols-2">
-              {services.map((service, index) => {
-                const Icon = service.icon;
-                return (
-                  <div
-                    key={index}
-                    className="group border border-border bg-background p-8 transition-all hover:border-foreground"
-                  >
-                    <div className="mb-6">
-                      <Icon className="h-8 w-8 text-foreground" strokeWidth={1} />
-                    </div>
-                    <h4 className="mb-3 font-sans text-xl font-medium text-foreground">
-                      {service.title}
-                    </h4>
-                    <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
-                      {service.description}
-                    </p>
-                    <ul className="space-y-2 border-t border-border pt-6">
-                      {service.details.map((detail, idx) => (
-                        <li
-                          key={idx}
-                          className="flex items-center gap-2 font-mono text-xs text-foreground"
-                        >
-                          <span className="h-px w-4 bg-foreground" />
-                          {detail}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                );
-              })}
+            {/* Technical & methodological competencies */}
+            <div>
+              <h3 className="font-semibold text-2xl text-foreground mb-6">
+                Technische & methodische Kompetenzen
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  "Digitale Transformation & IT-Strategie",
+                  "Agile Methoden, Design Thinking",
+                  "Projekt- & Programmmanagement",
+                  "Python (Data Analytics), JavaScript",
+                  "Arbeit mit interdisziplinären, internationalen Teams",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

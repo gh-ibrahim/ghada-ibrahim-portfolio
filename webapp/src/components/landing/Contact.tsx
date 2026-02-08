@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 import { useState } from "react";
 
 export const Contact = () => {
@@ -24,171 +24,172 @@ export const Contact = () => {
   };
 
   return (
-    <section id="kontakt" className="border-t border-border bg-muted px-6 py-24">
-      <div className="container max-w-6xl">
-        <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
-          {/* Section label */}
-          <div className="lg:col-span-3">
-            <div className="sticky top-24">
-              <div className="mb-4 h-px w-12 bg-foreground" />
-              <h2 className="font-mono text-sm uppercase tracking-wider text-muted-foreground">
-                04 — Kontakt
-              </h2>
+    <section id="contact" className="relative py-24 md:py-32 bg-background">
+      <div className="container px-6 md:px-12 lg:px-24">
+        <div className="max-w-6xl mx-auto">
+          {/* Section header */}
+          <div className="mb-16">
+            <div className="flex items-center gap-4 mb-4">
+              <span className="text-sm font-mono text-accent tracking-wider">04</span>
+              <div className="h-px flex-1 bg-border max-w-16" />
             </div>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Kontakt
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl">
+              Lassen Sie uns gemeinsam digitale Lösungen entwickeln, die echte Wirkung erzielen.
+            </p>
           </div>
 
-          {/* Contact content */}
-          <div className="lg:col-span-9">
-            <div className="grid gap-12 lg:grid-cols-2">
-              {/* Left: Contact info */}
-              <div className="space-y-8">
-                <div className="space-y-4">
-                  <h3 className="font-sans text-3xl font-light leading-tight text-foreground sm:text-4xl">
-                    Lassen Sie uns zusammenarbeiten
-                  </h3>
-                  <p className="text-base leading-relaxed text-muted-foreground">
-                    Ich freue mich über Ihre Nachricht und antworte in der Regel
-                    innerhalb von 24 Stunden.
-                  </p>
-                </div>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+            {/* Left: Contact info & social */}
+            <div className="space-y-12">
+              <div>
+                <h3 className="font-semibold text-2xl text-foreground mb-6">
+                  Nehmen Sie Kontakt auf
+                </h3>
+                <p className="text-lg text-muted-foreground mb-8">
+                  Ich freue mich über Ihre Nachricht und antworte in der Regel innerhalb von 24
+                  Stunden.
+                </p>
 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <Mail className="mt-1 h-5 w-5 text-foreground" strokeWidth={1} />
+                    <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-5 h-5 text-accent" />
+                    </div>
                     <div>
-                      <div className="mb-1 font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                      <div className="text-sm font-mono text-muted-foreground mb-1">
                         E-Mail
                       </div>
                       <a
-                        href="mailto:kontakt@example.de"
-                        className="text-base text-foreground transition-colors hover:text-accent"
+                        href="mailto:ghada.ibrahim@example.de"
+                        className="text-lg text-foreground hover:text-accent transition-colors"
                       >
-                        kontakt@example.de
+                        ghada.ibrahim@example.de
                       </a>
                     </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <Phone className="mt-1 h-5 w-5 text-foreground" strokeWidth={1} />
-                    <div>
-                      <div className="mb-1 font-mono text-xs uppercase tracking-wider text-muted-foreground">
-                        Telefon
-                      </div>
-                      <a
-                        href="tel:+491234567890"
-                        className="text-base text-foreground transition-colors hover:text-accent"
-                      >
-                        +49 123 456 7890
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <MapPin className="mt-1 h-5 w-5 text-foreground" strokeWidth={1} />
-                    <div>
-                      <div className="mb-1 font-mono text-xs uppercase tracking-wider text-muted-foreground">
-                        Standort
-                      </div>
-                      <p className="text-base text-foreground">
-                        Berlin, Deutschland
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Social links */}
-                <div className="border-t border-border pt-6">
-                  <div className="mb-4 font-mono text-xs uppercase tracking-wider text-muted-foreground">
-                    Social Media
-                  </div>
-                  <div className="flex gap-4">
-                    <a
-                      href="#"
-                      className="font-mono text-sm text-foreground transition-colors hover:text-accent"
-                    >
-                      LinkedIn
-                    </a>
-                    <a
-                      href="#"
-                      className="font-mono text-sm text-foreground transition-colors hover:text-accent"
-                    >
-                      GitHub
-                    </a>
-                    <a
-                      href="#"
-                      className="font-mono text-sm text-foreground transition-colors hover:text-accent"
-                    >
-                      Dribbble
-                    </a>
                   </div>
                 </div>
               </div>
 
-              {/* Right: Contact form */}
-              <div className="border border-border bg-background p-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="mb-2 block font-mono text-xs uppercase tracking-wider text-muted-foreground"
-                    >
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full border border-border bg-background px-4 py-3 font-sans text-sm text-foreground focus:border-foreground focus:outline-none"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="mb-2 block font-mono text-xs uppercase tracking-wider text-muted-foreground"
-                    >
-                      E-Mail
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full border border-border bg-background px-4 py-3 font-sans text-sm text-foreground focus:border-foreground focus:outline-none"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="mb-2 block font-mono text-xs uppercase tracking-wider text-muted-foreground"
-                    >
-                      Nachricht
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={6}
-                      className="w-full resize-none border border-border bg-background px-4 py-3 font-sans text-sm text-foreground focus:border-foreground focus:outline-none"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full border border-foreground bg-foreground px-6 py-3 font-mono text-sm uppercase tracking-wider text-background transition-all hover:bg-transparent hover:text-foreground"
+              {/* Social links */}
+              <div>
+                <h4 className="font-semibold text-lg text-foreground mb-4">
+                  Vernetzen Sie sich mit mir
+                </h4>
+                <div className="flex gap-4">
+                  <a
+                    href="#"
+                    className="w-12 h-12 rounded-full border border-border bg-card hover:bg-accent hover:border-accent hover:text-primary-foreground flex items-center justify-center transition-all"
+                    aria-label="LinkedIn"
                   >
-                    Nachricht senden
-                  </button>
-                </form>
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                  <a
+                    href="#"
+                    className="w-12 h-12 rounded-full border border-border bg-card hover:bg-accent hover:border-accent hover:text-primary-foreground flex items-center justify-center transition-all"
+                    aria-label="GitHub"
+                  >
+                    <Github className="w-5 h-5" />
+                  </a>
+                </div>
               </div>
+
+              {/* Additional info box */}
+              <div className="p-6 bg-card border border-border rounded-lg">
+                <h4 className="font-semibold text-foreground mb-3">
+                  Interessiert an Zusammenarbeit?
+                </h4>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Ich bin offen für neue Projekte und Kooperationen in den Bereichen:
+                </p>
+                <ul className="space-y-2">
+                  {[
+                    "Digitale Transformation & IT-Strategie",
+                    "Human-Centered Design Workshops",
+                    "Programm- & Projektmanagement",
+                    "Tech Education & Capacity Building",
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Right: Contact form */}
+            <div className="p-8 bg-card border border-border rounded-lg">
+              <h3 className="font-semibold text-xl text-foreground mb-6">
+                Nachricht senden
+              </h3>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
+                    Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                    placeholder="Ihr Name"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
+                    E-Mail *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                    placeholder="ihre.email@example.de"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
+                    Nachricht *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={6}
+                    className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground resize-none focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                    placeholder="Ihre Nachricht..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full px-8 py-4 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
+                >
+                  Nachricht senden
+                </button>
+              </form>
             </div>
           </div>
         </div>
