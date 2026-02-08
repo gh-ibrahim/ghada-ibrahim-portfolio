@@ -2,10 +2,59 @@ import { ArrowDown } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <section
-      id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-    >
+    <>
+      {/* Hidden ATS/SEO-optimized content for HR screening tools */}
+      <div className="sr-only" aria-hidden="true">
+        <h1>Ghada Ibrahim - Digitalisierung, IT-Strategie und Human-Centered Design Expertin</h1>
+        <div itemScope itemType="https://schema.org/Person">
+          <span itemProp="name">Ghada Ibrahim</span>
+          <span itemProp="jobTitle">Digital Transformation Expert, IT Strategy Consultant, Human-Centered Design Trainer</span>
+          <div itemProp="description">
+            Erfahrene Digitalisierungs-Expertin mit 10+ Jahren in IT-Programmmanagement, digitaler Transformation,
+            Human-Centered Design, Design Thinking, agile Methoden, Scrum, Projektmanagement, Change Management,
+            Stakeholder-Management, Tech Education, Workforce Development, E-Participation, Capacity Building,
+            Innovation Management, UX Research, Workshop Facilitation, Python, JavaScript, Data Analytics
+          </div>
+          <div itemProp="knowsAbout">
+            Digitale Transformation, IT-Strategie, Digitalisierung, Digital Strategy, Change Management,
+            Human-Centered Design, Design Thinking, User Experience, UX Design, Service Design,
+            Agile Methoden, Scrum, Kanban, Agile Project Management, Agile Coaching,
+            Projektmanagement, Programmmanagement, PMD Pro, Project Management for Development,
+            Stakeholder-Management, Multi-Stakeholder Coordination, International Development,
+            Tech Education, Bildungsprogramme, Workforce Development, Capacity Building,
+            E-Participation, Digital Participation, Civic Tech, GovTech,
+            Python Programming, JavaScript, TypeScript, Data Analytics, Data Science,
+            Workshop Facilitation, Training, Coaching, Mentoring,
+            International Cooperation, Development Projects, NGO Management,
+            Innovation Management, Product Management, Digital Products
+          </div>
+          <span itemProp="alumniOf">Portland State University, DataCamp</span>
+          <span itemProp="hasCredential">Mini MBA Emerging Leaders Programme, PMD Pro Certification, Data Analytics Python</span>
+          <div itemProp="workExperience" itemScope itemType="https://schema.org/OrganizationRole">
+            <span itemProp="roleName">IKT und Digitalisierungsberaterin</span>
+            <span itemProp="worksFor">GIZ Deutsche Gesellschaft für Internationale Zusammenarbeit</span>
+            <span itemProp="startDate">2019</span>
+            <span itemProp="endDate">2022</span>
+          </div>
+          <div itemProp="workExperience" itemScope itemType="https://schema.org/OrganizationRole">
+            <span itemProp="roleName">Senior Managerin Programmmanagerin Tech Education</span>
+            <span itemProp="worksFor">Gaza Sky Geeks</span>
+            <span itemProp="startDate">2016</span>
+            <span itemProp="endDate">2019</span>
+          </div>
+          <div itemProp="workExperience" itemScope itemType="https://schema.org/OrganizationRole">
+            <span itemProp="roleName">Freelance Trainerin Human-Centered Design</span>
+            <span itemProp="worksFor">Universität Stuttgart</span>
+            <span itemProp="startDate">2022</span>
+          </div>
+          <span itemProp="knowsLanguage">Arabisch Muttersprache, Englisch C1, Deutsch B2, Französisch B1</span>
+        </div>
+      </div>
+
+      <section
+        id="hero"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      >
       {/* Background with subtle grain texture */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/30 to-background" />
       <div className="absolute inset-0 opacity-[0.015] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuOSIgbnVtT2N0YXZlcz0iNCIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiLz48L3N2Zz4=')]" />
@@ -137,5 +186,6 @@ export const Hero = () => {
         <ArrowDown className="w-6 h-6 text-muted-foreground" />
       </a>
     </section>
+    </>
   );
 };
