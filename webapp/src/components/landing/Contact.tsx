@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import { useState } from "react";
 
 export const Contact = () => {
@@ -52,25 +52,6 @@ export const Contact = () => {
                   Ich freue mich über Ihre Nachricht und antworte in der Regel innerhalb von 24
                   Stunden.
                 </p>
-
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-5 h-5 text-accent" />
-                    </div>
-                    <div>
-                      <div className="text-sm font-mono text-muted-foreground mb-1">
-                        E-Mail
-                      </div>
-                      <a
-                        href="mailto:ghada.ibrahim@example.de"
-                        className="text-lg text-foreground hover:text-accent transition-colors"
-                      >
-                        ghada.ibrahim@example.de
-                      </a>
-                    </div>
-                  </div>
-                </div>
               </div>
 
               {/* Social links */}
@@ -80,18 +61,13 @@ export const Contact = () => {
                 </h4>
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/ghada-m-ibrahim-247a7486/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full border border-border bg-card hover:bg-accent hover:border-accent hover:text-primary-foreground flex items-center justify-center transition-all"
                     aria-label="LinkedIn"
                   >
                     <Linkedin className="w-5 h-5" />
-                  </a>
-                  <a
-                    href="#"
-                    className="w-12 h-12 rounded-full border border-border bg-card hover:bg-accent hover:border-accent hover:text-primary-foreground flex items-center justify-center transition-all"
-                    aria-label="GitHub"
-                  >
-                    <Github className="w-5 h-5" />
                   </a>
                 </div>
               </div>

@@ -61,29 +61,19 @@ export const Footer = () => {
               </div>
             </div>
 
-            {/* Contact & Social */}
+            {/* Social */}
             <div className="space-y-4">
               <div className="font-semibold text-foreground text-sm uppercase tracking-wider">
-                Kontakt
+                Vernetzen
               </div>
               <div className="flex flex-col gap-3">
                 <a
-                  href="mailto:ghada.ibrahim@example.de"
-                  className="text-sm text-muted-foreground hover:text-accent transition-colors"
-                >
-                  ghada.ibrahim@example.de
-                </a>
-                <a
-                  href="#"
+                  href="https://www.linkedin.com/in/ghada-m-ibrahim-247a7486/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm text-muted-foreground hover:text-accent transition-colors"
                 >
                   LinkedIn
-                </a>
-                <a
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-accent transition-colors"
-                >
-                  GitHub
                 </a>
               </div>
             </div>
